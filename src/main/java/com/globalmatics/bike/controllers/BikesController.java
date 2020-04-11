@@ -40,7 +40,11 @@ public class BikesController {
 	
 	@GetMapping("/{id}")
 	public Bike get(@PathVariable("id") long id) {
-		return bikeRepository.getOne(id);
+//		return bikeRepository.getOne(id);
+		
+		final Bike bike = bikeRepository.getOne(id);
+		
+		return bike;
 		
 //		return new Bike();
 	}
